@@ -1,0 +1,11 @@
+D:\project\ShopNC\ShopNC.Service\bin\Debug\ShopNC.Service.dll
+D:\project\ShopNC\ShopNC.Service\bin\Debug\ShopNC.Service.pdb
+D:\project\ShopNC\ShopNC.Service\bin\Debug\ShopNC.Entity.dll
+D:\project\ShopNC\ShopNC.Service\bin\Debug\ShopNC.IService.dll
+D:\project\ShopNC\ShopNC.Service\bin\Debug\ShopNC.Entity.pdb
+D:\project\ShopNC\ShopNC.Service\bin\Debug\ShopNC.IService.pdb
+D:\project\ShopNC\ShopNC.Service\obj\Debug\ShopNC.Service.csprojResolveAssemblyReference.cache
+D:\project\ShopNC\ShopNC.Service\obj\Debug\ShopNC.Service.dll
+D:\project\ShopNC\ShopNC.Service\obj\Debug\ShopNC.Service.pdb
+D:\project\ShopNC\ShopNC.Service\bin\Debug\EntityFramework.dll
+D:\project\ShopNC\ShopNC.Service\bin\Debug\EntityFramework.xml

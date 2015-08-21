@@ -1,0 +1,14 @@
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\ShopNC.Repository.dll.config
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\ShopNC.Repository.dll
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\ShopNC.Repository.pdb
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\EntityFramework.dll
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\ShopNC.Entity.dll
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\ShopNC.IRepository.dll
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\ShopNC.Entity.pdb
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\ShopNC.IRepository.pdb
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\EntityFramework.xml
+D:\project\ShopNC\ShopNC.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\project\ShopNC\ShopNC.Repository\obj\Debug\ShopNC.Repository.csprojResolveAssemblyReference.cache
+D:\project\ShopNC\ShopNC.Repository\obj\Debug\ShopNC.Repository.dll
+D:\project\ShopNC\ShopNC.Repository\obj\Debug\ShopNC.Repository.pdb

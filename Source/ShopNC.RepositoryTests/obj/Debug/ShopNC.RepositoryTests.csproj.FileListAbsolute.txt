@@ -1,0 +1,16 @@
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.RepositoryTests.dll
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.RepositoryTests.pdb
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.Repository.dll
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.IRepository.dll
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.Entity.dll
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\EntityFramework.dll
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.Repository.pdb
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.IRepository.pdb
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.Entity.pdb
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\EntityFramework.xml
+D:\project\ShopNC\ShopNC.RepositoryTests\obj\Debug\ShopNC.RepositoryTests.csprojResolveAssemblyReference.cache
+D:\project\ShopNC\ShopNC.RepositoryTests\obj\Debug\ShopNC.RepositoryTests.dll
+D:\project\ShopNC\ShopNC.RepositoryTests\obj\Debug\ShopNC.RepositoryTests.pdb
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\ShopNC.RepositoryTests.dll.config
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\EntityFramework.SqlServer.dll
+D:\project\ShopNC\ShopNC.RepositoryTests\bin\Debug\EntityFramework.SqlServer.xml

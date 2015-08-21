@@ -1,0 +1,4 @@
+D:\project\ShopNC\ShopNC.Common\bin\Debug\ShopNC.Common.dll
+D:\project\ShopNC\ShopNC.Common\bin\Debug\ShopNC.Common.pdb
+D:\project\ShopNC\ShopNC.Common\obj\Debug\ShopNC.Common.dll
+D:\project\ShopNC\ShopNC.Common\obj\Debug\ShopNC.Common.pdb
