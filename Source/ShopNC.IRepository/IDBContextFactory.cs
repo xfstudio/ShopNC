@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ShopNC.IRepository
 {
     public interface IDBContextFactory
-    {
+    {  
         DbContext GetCurrentContextInstence(); 
     }
 }
