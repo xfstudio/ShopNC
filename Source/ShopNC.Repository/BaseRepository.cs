@@ -34,7 +34,7 @@ namespace ShopNC.Repository
             if (entity != null)
             {
                 db.Set<T>().Add(entity);
-                db.SaveChanges();
+               // db.SaveChanges();
 
             }
             return entity;
@@ -50,7 +50,7 @@ namespace ShopNC.Repository
             db.Set<T>().Attach(entity);
             db.Entry<T>(entity).State = EntityState.Modified;
 
-            db.SaveChanges();
+           // db.SaveChanges();
             return true;
         }
 
@@ -65,7 +65,7 @@ namespace ShopNC.Repository
             db.Set<T>().Attach(entity);
             db.Entry<T>(entity).State = EntityState.Deleted;
 
-            db.SaveChanges();
+           // db.SaveChanges();
             return  true;
 
         }
