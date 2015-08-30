@@ -20,3 +20,9 @@ D:\Git\ShopNC\Source\ShopNC.Service\bin\Debug\EntityFramework.xml
 D:\Git\ShopNC\Source\ShopNC.Service\obj\Debug\ShopNC.Service.csprojResolveAssemblyReference.cache
 D:\Git\ShopNC\Source\ShopNC.Service\obj\Debug\ShopNC.Service.dll
 D:\Git\ShopNC\Source\ShopNC.Service\obj\Debug\ShopNC.Service.pdb
+D:\Git\ShopNC\Source\ShopNC.Service\bin\Debug\ShopNC.IRepository.dll
+D:\Git\ShopNC\Source\ShopNC.Service\bin\Debug\ShopNC.Repository.dll
+D:\Git\ShopNC\Source\ShopNC.Service\bin\Debug\ShopNC.IRepository.pdb
+D:\Git\ShopNC\Source\ShopNC.Service\bin\Debug\ShopNC.Repository.pdb
+D:\Git\ShopNC\Source\ShopNC.Service\bin\Debug\Autofac.dll
+D:\Git\ShopNC\Source\ShopNC.Service\bin\Debug\Autofac.xml

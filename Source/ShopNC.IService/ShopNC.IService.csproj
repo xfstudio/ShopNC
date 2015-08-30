@@ -39,7 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBaseService.cs" />
+    <Compile Include="IUserInfoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopNC.Entity\ShopNC.Entity.csproj">
+      <Project>{4680d8d5-b3e4-4c5b-9f70-cf24b8cbcad6}</Project>
+      <Name>ShopNC.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopNC.IRepository\ShopNC.IRepository.csproj">
+      <Project>{b6c16c34-e489-45b8-8a7a-ba4cc8610664}</Project>
+      <Name>ShopNC.IRepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

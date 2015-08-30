@@ -30,3 +30,5 @@ D:\Git\ShopNC\Source\ShopNCTest\bin\Debug\EntityFramework.SqlServer.xml
 D:\Git\ShopNC\Source\ShopNCTest\obj\Debug\ShopNCTest.csprojResolveAssemblyReference.cache
 D:\Git\ShopNC\Source\ShopNCTest\obj\Debug\ShopNCTest.exe
 D:\Git\ShopNC\Source\ShopNCTest\obj\Debug\ShopNCTest.pdb
+D:\Git\ShopNC\Source\ShopNCTest\bin\Debug\Autofac.dll
+D:\Git\ShopNC\Source\ShopNCTest\bin\Debug\Autofac.xml

@@ -6,3 +6,10 @@ D:\Git\ShopNC\Source\ShopNC.IService\bin\Debug\ShopNC.IService.dll
 D:\Git\ShopNC\Source\ShopNC.IService\bin\Debug\ShopNC.IService.pdb
 D:\Git\ShopNC\Source\ShopNC.IService\obj\Debug\ShopNC.IService.dll
 D:\Git\ShopNC\Source\ShopNC.IService\obj\Debug\ShopNC.IService.pdb
+D:\Git\ShopNC\Source\ShopNC.IService\bin\Debug\ShopNC.Entity.dll
+D:\Git\ShopNC\Source\ShopNC.IService\bin\Debug\ShopNC.IRepository.dll
+D:\Git\ShopNC\Source\ShopNC.IService\bin\Debug\EntityFramework.dll
+D:\Git\ShopNC\Source\ShopNC.IService\bin\Debug\ShopNC.Entity.pdb
+D:\Git\ShopNC\Source\ShopNC.IService\bin\Debug\ShopNC.IRepository.pdb
+D:\Git\ShopNC\Source\ShopNC.IService\bin\Debug\EntityFramework.xml
+D:\Git\ShopNC\Source\ShopNC.IService\obj\Debug\ShopNC.IService.csprojResolveAssemblyReference.cache

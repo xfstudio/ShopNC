@@ -30,7 +30,7 @@ namespace ShopNC.Repository.Tests
                 Roles = new List<UserRole>() { role }
             };
             userDal.AddEntity(user);
-           var result= session.SaveChanges();
+            var result= session.SaveChanges();
 
             Assert.IsTrue(user.ID > 0);
             Assert.IsTrue(result > 0);
@@ -62,6 +62,7 @@ namespace ShopNC.Repository.Tests
                 Roles = new List<UserRole>() { role }
             };
             userDal.AddEntity(user);
+            session.SaveChanges();
 
             Assert.IsTrue(userDal.DeleteEntity(user));
 

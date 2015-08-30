@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 namespace ShopNC.Repository
 {
     //数据访问层基类
-    public class BaseRepository<T> where T : class,new()
+    public class BaseRepository<T>:IBaseRepository<T>
+        where T : class,new()
     {
         //解耦了 当前UserInfoRepository跟上下文的直接依赖。
         //保证了线程内上下文的实例唯一
