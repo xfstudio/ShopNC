@@ -1,0 +1,32 @@
+﻿<#+
+public class IRepositoryTemplate:CSharpTemplate
+{
+    private string _className;
+
+    public IRepositoryTemplate(string className)
+    {
+        _className = className;
+    }
+
+	public override string TransformText()
+	{
+#>
+using ShopNC.Entity.Mapping;
+using ShopNC.IRepository;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ShopNC.Repository
+{
+    public partial class <#=_className#>Repository:BaseRepository<<#=_className#>>,I<#=_className#>Repository
+    {
+    }
+}
+<#+
+        return this.GenerationEnvironment.ToString();
+	}
+}
+#>

@@ -50,8 +50,15 @@
   <ItemGroup>
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="IDBContextFactory.cs" />
+    <Compile Include="IDBSession.cs" />
+    <Compile Include="IDBSessionFactory.cs" />
     <Compile Include="IUserInfoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T4\IDBSession.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IDBSession.tt</DependentUpon>
+    </Compile>
     <Compile Include="T4\IRepositoryMulti.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +81,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="T4\IDBSession.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IDBSession.cs</LastGenOutput>
+    </None>
     <None Include="T4\IRepositoryMulti.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IRepositoryMulti.cs</LastGenOutput>
