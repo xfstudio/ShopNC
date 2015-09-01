@@ -10,15 +10,3 @@ D:\project\ShopNC\ShopNC.IRepository\bin\Debug\EntityFramework.xml
 D:\project\ShopNC\ShopNC.IRepository\bin\Debug\EntityFramework.SqlServer.xml
 D:\project\ShopNC\ShopNC.IRepository\obj\Debug\ShopNC.IRepository.dll
 D:\project\ShopNC\ShopNC.IRepository\obj\Debug\ShopNC.IRepository.pdb
-D:\Git\ShopNC\Source\ShopNC.IRepository\obj\Debug\ShopNC.IRepository.dll
-D:\Git\ShopNC\Source\ShopNC.IRepository\obj\Debug\ShopNC.IRepository.pdb
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\ShopNC.IRepository.dll.config
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\ShopNC.IRepository.dll
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\ShopNC.IRepository.pdb
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\EntityFramework.dll
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\EntityFramework.SqlServer.dll
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\ShopNC.Entity.dll
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\ShopNC.Entity.pdb
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\EntityFramework.xml
-D:\Git\ShopNC\Source\ShopNC.IRepository\bin\Debug\EntityFramework.SqlServer.xml
-D:\Git\ShopNC\Source\ShopNC.IRepository\obj\Debug\ShopNC.IRepository.csprojResolveAssemblyReference.cache

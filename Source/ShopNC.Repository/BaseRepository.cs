@@ -28,7 +28,7 @@ namespace ShopNC.Repository
         /// <summary>
         /// 添加实体
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="entity"></param>
         /// <returns></returns>
         public T AddEntity(T entity)
         {
@@ -44,7 +44,7 @@ namespace ShopNC.Repository
         /// <summary>
         /// 更新实体
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="entity"></param>
         /// <returns></returns>
         public bool UpdateEntity(T entity)
         {
@@ -58,7 +58,7 @@ namespace ShopNC.Repository
         /// <summary>
         /// 删除实体 删除的时候只需要给主键赋值就可以
         /// </summary>
-        /// <param name="userId"></param>
+        /// <param name="entity"></param>
         /// <returns></returns>
         public bool DeleteEntity(T entity)
         {
@@ -84,13 +84,13 @@ namespace ShopNC.Repository
         /// <summary>
         /// 根据条件获取实体列表(分页)
         /// </summary>
-        /// <typeparam name="S"></typeparam>
-        /// <param name="whereLambda"></param>
-        /// <param name="pageIndex"></param>
-        /// <param name="pageSize"></param>
-        /// <param name="total"></param>
-        /// <param name="orderLambda"></param>
-        /// <param name="ifAsc"></param>
+        /// <typeparam name="S">排序类型</typeparam>
+        /// <param name="whereLambda">查询条件</param>
+        /// <param name="pageIndex">页索引</param>
+        /// <param name="pageSize">页大小</param>
+        /// <param name="total">总记录数</param>
+        /// <param name="orderLambda">排序Lambda</param>
+        /// <param name="ifAsc">是否自增</param>
         /// <returns></returns>
         public IQueryable<T> LoadPageEntity<S>(Expression<Func<T, bool>> whereLambda, int? pageIndex, int? pageSize, out int total, Expression<Func<T, S>> orderLambda, bool isAsc)
         {

@@ -32,8 +32,10 @@ namespace ShopNC.Repository.Tests
             userDal.AddEntity(user);
             var result= session.SaveChanges();
 
+
             Assert.IsTrue(user.ID > 0);
             Assert.IsTrue(result > 0);
+
         }
 
         [TestMethod()]
@@ -65,8 +67,9 @@ namespace ShopNC.Repository.Tests
             session.SaveChanges();
 
             Assert.IsTrue(userDal.DeleteEntity(user));
-
             Assert.IsTrue(session.SaveChanges() > 0);
+
+            session.DisposeDBContext();
         }
 
         [TestMethod()]

@@ -45,5 +45,11 @@ namespace ShopNC.Repository
         {
             return this.CurrentEFContext.SaveChanges();
         }
+
+
+        public void DisposeDBContext()
+        {
+            dbContextFactory.DisposeContext();
+        }
     }
 }

@@ -11,5 +11,7 @@ namespace ShopNC.IRepository
     {
         int ExcuteSql(string sql, params SqlParameter[] parameters);
         int SaveChanges();
+
+        void DisposeDBContext();
     }
 }
