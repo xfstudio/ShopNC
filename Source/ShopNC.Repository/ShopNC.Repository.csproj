@@ -63,16 +63,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="T4\RepositoryMulti.cs">
-      <DependentUpon>RepositoryMulti.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="T4\RepositoryTemplate.cs">
-      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="T4\UserInfoRepository.cs" />
     <Compile Include="T4\UserRoleRepository.cs" />
     <Compile Include="UserInfoRepository.cs" />
@@ -96,20 +86,32 @@
     </None>
     <None Include="T4\RepositoryMulti.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RepositoryMulti.cs</LastGenOutput>
       <LastOutputs>
-.\RepositoryMulti.cs
+.\RepositoryMulti.txt
 .\UserInfoRepository.cs
 .\UserRoleRepository.cs
 </LastOutputs>
+      <LastGenOutput>RepositoryMulti.txt</LastGenOutput>
     </None>
     <None Include="T4\RepositoryTemplate.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
+      <LastGenOutput>RepositoryTemplate.txt</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="T4\RepositoryMulti.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepositoryMulti.tt</DependentUpon>
+    </Content>
+    <Content Include="T4\RepositoryTemplate.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

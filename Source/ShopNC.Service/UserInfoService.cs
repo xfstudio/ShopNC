@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ShopNC.Service
 {
-    public class UserInfoService:BaseService<UserInfo>, IUserInfoService
+    public partial class UserInfoService:BaseService<UserInfo>, IUserInfoService
     {
     }
 }

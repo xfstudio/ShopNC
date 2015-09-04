@@ -85,6 +85,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ShopNC.Common\ShopNC.Common.csproj">
+      <Project>{c58efad2-b203-4cd0-a4e6-7081cf3508f3}</Project>
+      <Name>ShopNC.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ShopNC.Entity\ShopNC.Entity.csproj">
       <Project>{4680d8d5-b3e4-4c5b-9f70-cf24b8cbcad6}</Project>
       <Name>ShopNC.Entity</Name>

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace ShopNC.Entity.Mapping
 {
-    public class UserInfo
+    public class UserInfo : EntityBase<int>
     {
-        [Key]
-        public int ID { get; set; }
+        //[Key]
+        //public int ID { get; set; }
 
         [MaxLength(16), Required]
         public string UserName { get; set; }

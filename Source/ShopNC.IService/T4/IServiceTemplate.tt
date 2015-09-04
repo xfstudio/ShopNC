@@ -1,11 +1,11 @@
-﻿//添加此句防止模板文件生成.CS 包含ErrorGeneration
+﻿//添加此句防止模板文件生成.CS 包含ErrorGeneratingOutput
 <#@ output extension=".txt" #>
 <#+
-public class IRepositoryTemplate:CSharpTemplate
+public class IServiceTemplate:CSharpTemplate
 {
     private string _className;
 
-    public IRepositoryTemplate(string className)
+    public IServiceTemplate(string className)
     {
         _className = className;
     }
@@ -20,9 +20,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopNC.IRepository
+namespace ShopNC.IService
 {
-    public partial interface I<#=_className#>Repository:IBaseRepository<<#=_className#>>
+    public partial interface I<#=_className#>Service:IBaseService<<#=_className#>>
     {
     }
 }

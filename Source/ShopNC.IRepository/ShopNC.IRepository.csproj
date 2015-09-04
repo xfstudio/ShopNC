@@ -59,16 +59,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IDBSession.tt</DependentUpon>
     </Compile>
-    <Compile Include="T4\IRepositoryMulti.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IRepositoryMulti.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T4\IRepositoryTemplate.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IRepositoryTemplate.tt</DependentUpon>
-    </Compile>
     <Compile Include="T4\IUserInfoRepository.cs" />
     <Compile Include="T4\IUserRoleRepository.cs" />
   </ItemGroup>
@@ -87,20 +77,32 @@
     </None>
     <None Include="T4\IRepositoryMulti.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>IRepositoryMulti.cs</LastGenOutput>
       <LastOutputs>
-.\IRepositoryMulti.cs
+.\IRepositoryMulti.txt
 .\IUserInfoRepository.cs
 .\IUserRoleRepository.cs
 </LastOutputs>
+      <LastGenOutput>IRepositoryMulti.txt</LastGenOutput>
     </None>
     <None Include="T4\IRepositoryTemplate.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>IRepositoryTemplate.cs</LastGenOutput>
+      <LastGenOutput>IRepositoryTemplate.txt</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="T4\IRepositoryMulti.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IRepositoryMulti.tt</DependentUpon>
+    </Content>
+    <Content Include="T4\IRepositoryTemplate.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IRepositoryTemplate.tt</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

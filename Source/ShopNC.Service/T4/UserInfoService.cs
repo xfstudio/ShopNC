@@ -1,13 +1,14 @@
 ﻿using ShopNC.Entity.Mapping;
+using ShopNC.IService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopNC.IService
+namespace ShopNC.Service
 {
-    public partial interface IUserInfoService:IBaseService<UserInfo>
+    public partial class UserInfoService:BaseService<UserInfo>,IUserInfoService
     {
     }
 }

@@ -1,4 +1,6 @@
-﻿<#+
+﻿//添加此句防止模板文件生成.CS 包含ErrorGeneration
+<#@ output extension=".txt" #>
+<#+
 public class IRepositoryTemplate:CSharpTemplate
 {
     private string _className;

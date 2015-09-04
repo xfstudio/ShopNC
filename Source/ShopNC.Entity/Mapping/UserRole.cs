@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace ShopNC.Entity.Mapping
 {
-    public class UserRole
+    public class UserRole:EntityBase<int>
     {
-        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
+        //[Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public int ID { get; set; }
 
         [MaxLength(16),Required]
         public string ENName { get; set; }

@@ -19,7 +19,7 @@ namespace ShopNC.Repository
         {
             containerBuilder.RegisterType<DBSession>().As<IDBSession>().SingleInstance();
             container= containerBuilder.Build();
-        }
+         }
 
         public IContainer Container { get { return container; } }
         

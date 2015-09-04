@@ -20,14 +20,15 @@ namespace ShopNC.Service
         {
             get { return session; }
         }
-        static BaseService() 
+       /* static BaseService() 
         {
             if (session==null)
             {
-                session=new RepositoryContainner().Container.Resolve<IDBSession>();
+               // session=new RepositoryContainner().Container.Resolve<IDBSession>();
+                //此版本Autofac自动Resolve？
                 RepositoryContainner.DisposeContainer();
             }
-        }
+        }*/
 
         public IBaseRepository<T> baseRepository = new RepositoryContainner().GetBaseRepository<T>();
         public T AddEntity(T entity)

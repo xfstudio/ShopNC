@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ShopNC.IService
 {
-    public partial interface IUserInfoService:IBaseService<UserInfo>
+    public partial interface IUserRoleService:IBaseService<UserRole>
     {
     }
 }
