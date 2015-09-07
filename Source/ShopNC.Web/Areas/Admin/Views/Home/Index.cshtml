@@ -1,0 +1,155 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link href="~/Scripts/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet" />
+    <link href="~/Scripts/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Admin/WHS/style.css" rel="stylesheet" />
+    <link href="~/Content/Admin/WHS/default.css" rel="stylesheet" />
+    <style type="text/css">
+        #header {
+            width: 100%;
+            overflow: hidden;
+            background: url('/Content/Admin/WHS/master_header.png') no-repeat left center #B3DFDA;
+        }
+
+        .panel-body {
+            padding: 0;
+        }
+
+        .panel {
+            margin-bottom: 2px;
+        }
+
+        .easyui-accordion > div {
+            height: auto;
+            border-bottom: 0;
+        }
+
+        .panel-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #0e2d5f;
+            height: 16px;
+            line-height: 16px;
+        }
+        span.nav {
+            display: inline-block;
+        }
+        #nav ul li:hover {
+            border: 1px dashed #b7daf5;
+            background: #e1eff9;
+        }
+
+        #nav ul li a {
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="easyui-layout">
+    <!--------------头部---------------------------->
+    <div class="header" id="header" data-options="region:'north'">
+        <div class="userinfo" style="display:block">
+            <font color="red" size="5">@ViewBag.FullName</font>，您好！
+        </div>
+        <ul class="navigation" style="display:block"></ul>
+        <ul class="button">
+            <li style="margin-top:10px;">
+                当前时间：<b id="date"></b>
+            </li>
+            <li>
+                <a href="javascript:void(0)" onclick="javascript:ShowPasswordDialog()" title="修改用户密码">
+                    <img border="0" src="~/Content/Admin/WHS/btn_hd_support.gif" title="修改用户密码" alt="修改用户密码" />
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="addTab('在线帮助', 'userGuid.htm', 'icon icon-help')" title="在线帮助">
+                    <img border="0" src="~/Content/Admin/WHS/btn_hd_help.gif" title="在线帮助" alt="在线帮助" />
+                </a>
+            </li>
+            <li>
+                <a href="/Login/Index" title="注销"><b><img border="0" src="~/Content/Admin/WHS/btn_hd_exit.gif" title="注销" alt="注销" /></b></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--左侧导航菜单-->
+    <div region="west" split="true" title="导航菜单" style="width:200px;padding:1px;overflow:hidden;">
+        <div  id="nav" class="easyui-accordion" fit="true" border="false">
+            <div  title="主功能菜单" iconcls="icon-computer" style="padding:10px;overflow:auto;" selected="true">
+                <ul>
+                    <li><div><a href="javascript:;"><span class="icon icon-lock">&nbsp;</span><span class="nav">脚本功能</span></a></div></li>
+                    <li><div><a href="javascript:;"><span class="icon icon-lock">&nbsp;</span><span class="nav">打开页面功能</span></a></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--主工作区-->
+    <div id="mainPanle" region="center" title="" style="overflow:hidden;">
+        <div id="tt" class="easyui-tabs" fit="true">
+            <div title="用户管理" data-options="iconCls:'icon-reload'" closable="true" style="padding: 20px;">
+                <iframe src="" frameborder="0" scrolling="no" style="width:100%; height:95%;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" data-options="region:'south',split:true" style="height:30px;">
+        版权所有：-----ShopNC
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("/Scripts/jquery-easyui-1.4.3/jquery.easyui.min.js")
+    <script src="~/Scripts/datapattern.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            initLeftMenuEvent();
+            showTime();
+        })
+
+        function initLeftMenuEvent() {
+            $(".menuItem").click(function () {
+
+                var title = $(this).text();
+                var url = $(this).attr("href");
+
+                //判断是否存在选项卡
+                if ($('#tt').tabs('exists', title)) {
+                    $('#tt').tabs('select', title)
+                }
+
+                else {
+                    $('#tt').tabs('add', {
+                        title: title,
+                        content: '<iframe src="' + url + '" scrolling="no" frameborder="0" height="99%" width="100%"></iframe>',
+                        closable: true,
+                        tools: [{
+                            iconCls: 'icon-mini-refresh',
+                            handler: function () {
+                                // alert('refresh');
+                            }
+                        }]
+                    });
+                }
+
+                //让菜单导向不会导向到单独的页面如<a href="UserInfo/Index" class="menuItem">用户管理</a>
+                return false;
+            });
+        }
+
+        function showTime() {
+            setInterval(function () {
+                var timeNow = (new Date()).pattern("yyyy-MM-dd HH:mm:ss EEE");
+                $("#date").html(timeNow);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

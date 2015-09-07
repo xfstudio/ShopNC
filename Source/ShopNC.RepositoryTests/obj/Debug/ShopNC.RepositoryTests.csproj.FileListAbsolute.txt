@@ -22,13 +22,11 @@ D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\EntityFramework.SqlServer.
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\ShopNC.Entity.dll
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\ShopNC.IRepository.dll
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\ShopNC.Repository.dll
-D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\Autofac.dll
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\ShopNC.Entity.pdb
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\ShopNC.IRepository.pdb
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\ShopNC.Repository.pdb
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\EntityFramework.xml
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\EntityFramework.SqlServer.xml
-D:\Git\ShopNC\Source\ShopNC.RepositoryTests\bin\Debug\Autofac.xml
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\obj\Debug\ShopNC.RepositoryTests.csprojResolveAssemblyReference.cache
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\obj\Debug\ShopNC.RepositoryTests.dll
 D:\Git\ShopNC\Source\ShopNC.RepositoryTests\obj\Debug\ShopNC.RepositoryTests.pdb

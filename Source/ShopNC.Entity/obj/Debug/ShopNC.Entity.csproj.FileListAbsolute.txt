@@ -24,3 +24,4 @@ D:\Git\ShopNC\Source\ShopNC.Entity\obj\Debug\ShopNC.Entity.Migrations.AddUserRol
 D:\Git\ShopNC\Source\ShopNC.Entity\obj\Debug\ShopNC.Entity.csproj.GenerateResource.Cache
 D:\Git\ShopNC\Source\ShopNC.Entity\obj\Debug\ShopNC.Entity.dll
 D:\Git\ShopNC\Source\ShopNC.Entity\obj\Debug\ShopNC.Entity.pdb
+D:\Git\ShopNC\Source\ShopNC.Entity\obj\Debug\ShopNC.Entity.csprojResolveAssemblyReference.cache

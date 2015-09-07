@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopNC.Repository
+namespace ShopNC.Service
 {
    public class RepositoryContainner
     {
