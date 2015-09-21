@@ -8,8 +8,8 @@ using ShopNC.IRepository;
 
 namespace ShopNC.IService
 {
-   public  interface IBaseService<T> where T:
-        class ,new()
+    public interface IBaseService<T> where T :
+         class ,new()
     {
 
         T AddEntity(T entity);
@@ -21,7 +21,21 @@ namespace ShopNC.IService
         IQueryable<T> LoadEntity(Expression<Func<T, bool>> whereLambda);
 
         IQueryable<T> LoadPageEntity<S>(Expression<Func<T, bool>> whereLambda, int? pageIndex, int? pageSize, out int total, Expression<Func<T, S>> orderLambda, bool isAsc);
+        
 
-        IDBSession DBSession { get;}
+        #region 异步Task
+        Task<T> AddEntityAsync(T entity);
+
+        Task<bool> UpdateEntityAsync(T entity);
+
+        Task<bool> DeleteEntityAsync(T entity);
+
+        Task<IQueryable<T>> LoadEntityAsync(Expression<Func<T, bool>> whereLambda);
+
+        Task<IQueryable<T>> LoadPageEntityAsync<S>(Expression<Func<T, bool>> whereLambda, int? pageIndex, int? pageSize, out int total, Expression<Func<T, S>> orderLambda, bool isAsc);
+
+        #endregion
+
+
     }
 }

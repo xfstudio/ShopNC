@@ -25,6 +25,10 @@ namespace ShopNC.Entity.Mapping
 
         public DbSet<UserRole> UserRole { get; set; }
 
+        public DbSet<Permission> Permission { get; set; }
+
+        public DbSet<PermissionGroup> PermissionGroup { get; set; }
+
 
        // public DbSet<UserRoleR> UserRoleR { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

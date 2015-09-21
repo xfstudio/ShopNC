@@ -13,5 +13,9 @@ namespace ShopNC.IRepository
 
     IUserRoleRepository UserRoleRepository{ get;}
 
+    IPermissionRepository PermissionRepository{ get;}
+
+    IPermissionGroupRepository PermissionGroupRepository{ get;}
+
     }
 }

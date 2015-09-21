@@ -39,6 +39,36 @@ namespace ShopNC.Repository
             }
         }
 
+
+        private IPermissionRepository _PermissionRepository;
+        public  IPermissionRepository  PermissionRepository
+        {
+            get 
+            {
+                if (_PermissionRepository == null)
+                {
+                   _PermissionRepository=new PermissionRepository();
+                }
+
+                return _PermissionRepository;
+            }
+        }
+
+
+        private IPermissionGroupRepository _PermissionGroupRepository;
+        public  IPermissionGroupRepository  PermissionGroupRepository
+        {
+            get 
+            {
+                if (_PermissionGroupRepository == null)
+                {
+                   _PermissionGroupRepository=new PermissionGroupRepository();
+                }
+
+                return _PermissionGroupRepository;
+            }
+        }
+
     }
 }
 

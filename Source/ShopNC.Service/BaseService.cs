@@ -14,9 +14,9 @@ namespace ShopNC.Service
         where T:class,new()
     {
 
-        public static IDBSession session = null;
+        private static IDBSession session = null;
 
-        public IDBSession DBSession
+        protected IDBSession DBSession
         {
             get { return session; }
         }
@@ -31,23 +31,27 @@ namespace ShopNC.Service
         public IBaseRepository<T> baseRepository = new RepositoryContainner().GetBaseRepository<T>();
         public T AddEntity(T entity)
         {
-            baseRepository.AddEntity(entity);
- 
-            return entity;
+            var model= baseRepository.AddEntity(entity);
+            DBSession.SaveChanges();
+
+            return model;
         }
 
         public bool UpdateEntity(T entity)
         {
-            baseRepository.AddEntity(entity);
+          var result= baseRepository.UpdateEntity(entity);
+          DBSession.SaveChanges();
 
-            return true;
+          return result;
         }
 
         public bool DeleteEntity(T entity)
         {
-            baseRepository.DeleteEntity(entity);
+           var result= baseRepository.DeleteEntity(entity);
+           DBSession.SaveChanges();
 
-            return true;
+           return result;
+
         }
 
         public IQueryable<T> LoadEntity(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda)
@@ -58,6 +62,45 @@ namespace ShopNC.Service
         public IQueryable<T> LoadPageEntity<S>(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda, int? pageIndex, int? pageSize, out int total, System.Linq.Expressions.Expression<Func<T, S>> orderLambda, bool isAsc)
         {
             return baseRepository.LoadPageEntity(whereLambda, pageIndex, pageSize, out total, orderLambda, isAsc);
+        }
+
+
+        public async Task<T> AddEntityAsync(T entity)
+        {
+            var model= baseRepository.AddEntity(entity);
+            DBSession.SaveChagesAsync();
+
+            return await Task.FromResult(model);
+        }
+
+        public Task<bool> UpdateEntityAsync(T entity)
+        {
+            var result = baseRepository.UpdateEntity(entity);
+            DBSession.SaveChagesAsync();
+
+            return Task.FromResult(result);
+        }
+
+        public Task<bool> DeleteEntityAsync(T entity)
+        {
+            var result = baseRepository.DeleteEntity(entity);
+            DBSession.SaveChagesAsync();
+
+            return Task.FromResult(result);
+        }
+
+        public Task<IQueryable<T>> LoadEntityAsync(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda)
+        {
+            var data= baseRepository.LoadEntity(whereLambda);
+
+            return Task.FromResult(data);
+        }
+
+        public Task<IQueryable<T>> LoadPageEntityAsync<S>(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda, int? pageIndex, int? pageSize, out int total, System.Linq.Expressions.Expression<Func<T, S>> orderLambda, bool isAsc)
+        {
+            var data= baseRepository.LoadPageEntity(whereLambda, pageIndex, pageSize, out total, orderLambda, isAsc);
+
+            return Task.FromResult(data);
         }
     }
 }

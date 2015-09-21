@@ -23,6 +23,7 @@ namespace ShopNC.Web
                 lock (o)
                 {
                     containerBuilder = new ContainerBuilder();
+
                     containerBuilder.RegisterType<UserInfoService>().As<IUserInfoService>().SingleInstance();
                     containerBuilder.RegisterType<UserRoleService>().As<IUserRoleService>().SingleInstance();
 
@@ -35,7 +36,7 @@ namespace ShopNC.Web
             }
 
             //  containerBuilder.Build();
-            containerBuilder.RegisterControllers(Assembly.GetExecutingAssembly());  //注入所有Controller
+            //containerBuilder.RegisterControllers(Assembly.GetExecutingAssembly());  //注入所有Controller
             var container = containerBuilder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container)); //解决Controller 没有为该对象定义无参数的构造函数
         }

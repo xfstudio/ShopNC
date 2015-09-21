@@ -46,6 +46,10 @@ namespace ShopNC.Repository
             return this.CurrentEFContext.SaveChanges();
         }
 
+        public int SaveChagesAsync() 
+        {
+            return this.CurrentEFContext.SaveChangesAsync().Result;
+        }
 
         public void DisposeDBContext()
         {

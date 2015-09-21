@@ -182,6 +182,62 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin\CSS\Index.css" />
+    <Content Include="Content\Admin\Img\nav.png" />
+    <Content Include="Content\icon\bug-blue.png" />
+    <Content Include="Content\icon\bug.png" />
+    <Content Include="Content\icon\chart_bar.png" />
+    <Content Include="Content\icon\config.png" />
+    <Content Include="Content\icon\email.png" />
+    <Content Include="Content\icon\email_open.png" />
+    <Content Include="Content\icon\light.png" />
+    <Content Include="Content\icon\newWindow.png" />
+    <Content Include="Content\icon\order.png" />
+    <Content Include="Content\icon\Print.png" />
+    <Content Include="Content\icon\product-.png" />
+    <Content Include="Content\icon\product.png" />
+    <Content Include="Content\icon\promotion.png" />
+    <Content Include="Content\icon\statis.png" />
+    <Content Include="Content\icon\supplier.png" />
+    <Content Include="Content\icon\theme.png" />
+    <Content Include="Content\icon\tool.png" />
+    <Content Include="Content\icon\toolsAdd.png" />
+    <Content Include="Content\icon\toolsBonus.png" />
+    <Content Include="Content\icon\toolsCancel.png" />
+    <Content Include="Content\icon\toolsCard.png" />
+    <Content Include="Content\icon\toolsConfig.png" />
+    <Content Include="Content\icon\toolsCoupon.png" />
+    <Content Include="Content\icon\toolsCoupon2.png" />
+    <Content Include="Content\icon\toolsCover.png" />
+    <Content Include="Content\icon\toolsDel.png" />
+    <Content Include="Content\icon\toolsDel2.png" />
+    <Content Include="Content\icon\toolsDown.png" />
+    <Content Include="Content\icon\toolsDownload.gif" />
+    <Content Include="Content\icon\toolsEdit.png" />
+    <Content Include="Content\icon\toolsEmail.png" />
+    <Content Include="Content\icon\toolsLanguage.png" />
+    <Content Include="Content\icon\toolsMinus.png" />
+    <Content Include="Content\icon\toolsMobile.png" />
+    <Content Include="Content\icon\toolsPlus.png" />
+    <Content Include="Content\icon\toolsPoint.png" />
+    <Content Include="Content\icon\toolsPrint.png" />
+    <Content Include="Content\icon\toolsRefresh.png" />
+    <Content Include="Content\icon\toolsRotate.png" />
+    <Content Include="Content\icon\toolsSave.png" />
+    <Content Include="Content\icon\toolsSelectAll.png" />
+    <Content Include="Content\icon\toolsShip.png" />
+    <Content Include="Content\icon\toolsSMS.png" />
+    <Content Include="Content\icon\toolsSubmit.png" />
+    <Content Include="Content\icon\toolsTips.png" />
+    <Content Include="Content\icon\toolsUnite.png" />
+    <Content Include="Content\icon\toolsUp.png" />
+    <Content Include="Content\icon\toolsUpload.gif" />
+    <Content Include="Content\icon\tools_closed.png" />
+    <Content Include="Content\icon\tools_images.png" />
+    <Content Include="Content\icon\tools_screwdriver.png" />
+    <Content Include="Content\icon\user.png" />
+    <Content Include="Content\icon\value.png" />
+    <Content Include="Content\Admin\Img\navold.png" />
     <Content Include="Content\Admin\WHS\default.css" />
     <Content Include="Content\Admin\WHS\style.css" />
     <Content Include="Content\Admin\WHS\btn_hd_exit.gif" />
@@ -658,8 +714,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Content\Admin\CSS\" />
-    <Folder Include="Content\Admin\Img\" />
     <Folder Include="Views\Captcha\" />
   </ItemGroup>
   <ItemGroup>

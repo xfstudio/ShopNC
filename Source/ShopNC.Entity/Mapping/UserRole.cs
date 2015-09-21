@@ -34,6 +34,8 @@ namespace ShopNC.Entity.Mapping
         //[InverseProperty("UserRole")]//属性反转
         //public List<UserRoleR> UserRoleR { get; set; }
 
-        public virtual List<UserInfo> UserInfos { get; set; }
+        public virtual IList<UserInfo> UserInfos { get; set; }
+
+        public virtual IList<PermissionGroup> PermissionGroups { get; set; }
     }
 }

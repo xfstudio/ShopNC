@@ -43,6 +43,9 @@ namespace ShopNC.Entity.Mapping
         public string Editor { get; set; }
 
        //public List<UserRoleR> UserRoleR { get; set; }
-       public virtual List<UserRole> Roles { get; set; }
+         public virtual List<UserRole> Roles { get; set; }
+
+        //特殊权限
+         public virtual List<Permission> Permissions { get; set; }
     }
 }

@@ -11,11 +11,12 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/Admin/WHS/style.css" rel="stylesheet" />
     <link href="~/Content/Admin/WHS/default.css" rel="stylesheet" />
+    <link href="~/Content/Admin/CSS/Index.css" rel="stylesheet" />
     <style type="text/css">
         #header {
             width: 100%;
             overflow: hidden;
-            background: url('/Content/Admin/WHS/master_header.png') no-repeat left center #B3DFDA;
+            background: url('/Content/Admin/WHS/master_header.png') #B3DFDA no-repeat left center 0 0;
         }
 
         .panel-body {
@@ -50,12 +51,37 @@
             display: inline-block;
             width: 100%;
         }
+
+        /*一级导航*/
+
     </style>
 </head>
 
 <body class="easyui-layout">
     <!--------------头部---------------------------->
     <div class="header" id="header" data-options="region:'north'">
+        <div class="navmenu">
+            <ul class="menu">
+                <li class="current" id="menu0"><a href="/"><span><img src="/Content/icon/product.png" height="15px" />商 品</span></a> </li>
+
+                <li class="" id="menu1"><a href="/"><span><img src="/Content/icon/order.png" height="15px" />订 单</span></a> </li>
+
+                <li class="" id="menu2"><a href="/"><span><img src="/Content/icon/user.png" height="15px" />会 员</span></a> </li>
+
+                <li class="" id="menu3"><a href="/"><span><img src="/Content/icon/promotion.png" height="15px" />营 销</span></a> </li>
+
+                <li class="" id="menu4"><a href="/"><span><img src="/Content/icon/theme.png" height="15px" />页 面</span></a> </li>
+
+                <li class="" id="menu5"><a href="/"><span><img src="/Content/icon/config.png" height="15px" />配 置</span></a> </li>
+
+                <li class="" id="menu6"><a href="/"><span><img src="/Content/icon/value.png" height="15px" />增 值</span></a> </li>
+
+                <li class="" id="menu7"><a href="/"><span><img src="/Content/icon/tool.png" height="15px" />工具箱</span></a> </li>
+
+            </ul>
+            <ul class="tool"><li><span><a href="#">桌面</a> | <a href="javascript:void(0);" onclick="Copyright();">关于</a></span></li></ul><ul class="faq"></ul>
+        </div>
+
         <div class="userinfo" style="display:block">
             <font color="red" size="5">@ViewBag.FullName</font>，您好！
         </div>

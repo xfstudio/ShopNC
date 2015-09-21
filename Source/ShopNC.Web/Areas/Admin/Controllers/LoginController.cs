@@ -34,9 +34,8 @@ namespace ShopNC.Web.Areas.Admin.Controllers
             {
                 return JavaScript("alert('验证码错误！');");
             }
-
             string pwd = Common.MD5Encode.MD5(user.Password);
-            user = this.bll.LoadEntity(p => user.UserName == p.UserName && pwd == p.Password).FirstOrDefault();
+            user = this.bll.LoadEntityAsync(p => user.UserName == p.UserName && pwd == p.Password).Result.FirstOrDefault();
 
             if (user == null)
             {

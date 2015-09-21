@@ -62,6 +62,8 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="T4\PermissionGroupRepository.cs" />
+    <Compile Include="T4\PermissionRepository.cs" />
     <Compile Include="T4\UserInfoRepository.cs" />
     <Compile Include="T4\UserRoleRepository.cs" />
     <Compile Include="UserInfoRepository.cs" />
@@ -86,6 +88,8 @@
     <None Include="T4\RepositoryMulti.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastOutputs>
+.\PermissionGroupRepository.cs
+.\PermissionRepository.cs
 .\RepositoryMulti.txt
 .\UserInfoRepository.cs
 .\UserRoleRepository.cs

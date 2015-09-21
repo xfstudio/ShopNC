@@ -46,6 +46,8 @@
     <Compile Include="BaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespositoryContainner.cs" />
+    <Compile Include="T4\PermissionGroupService.cs" />
+    <Compile Include="T4\PermissionService.cs" />
     <Compile Include="T4\ServiceMulti.cs">
       <DependentUpon>ServiceMulti.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -85,6 +87,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ServiceMulti.cs</LastGenOutput>
       <LastOutputs>
+.\PermissionGroupService.cs
+.\PermissionService.cs
 .\ServiceMulti.cs
 .\UserInfoService.cs
 .\UserRoleService.cs

@@ -59,6 +59,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IDBSession.tt</DependentUpon>
     </Compile>
+    <Compile Include="T4\IPermissionGroupRepository.cs" />
+    <Compile Include="T4\IPermissionRepository.cs" />
     <Compile Include="T4\IUserInfoRepository.cs" />
     <Compile Include="T4\IUserRoleRepository.cs" />
   </ItemGroup>
@@ -78,6 +80,8 @@
     <None Include="T4\IRepositoryMulti.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastOutputs>
+.\IPermissionGroupRepository.cs
+.\IPermissionRepository.cs
 .\IRepositoryMulti.txt
 .\IUserInfoRepository.cs
 .\IUserRoleRepository.cs
