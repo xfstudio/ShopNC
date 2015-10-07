@@ -20,13 +20,13 @@ namespace ShopNC.Service.Tests
         [TestMethod()]
         public void AddEntityTest()
         {
-            var permission=new Permission(){Name="测试",Url="/Admin/User/Add"};
+            var permission=new Permission(){Name="测试",Path="/Admin/User/Add"};
             permissionBLL.AddEntity(permission);
 
             var group = new PermissionGroup { Name = "管理员", 
                 Permissions = new  List<Permission>{
                     permission,
-                    new Permission(){Name="添加管理员",Url="/Admin/User/Add"}
+                    new Permission(){Name="添加管理员",Path="/Admin/User/Add"}
                 } 
             };
 

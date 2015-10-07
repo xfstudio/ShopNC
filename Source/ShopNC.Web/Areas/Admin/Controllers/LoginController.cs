@@ -12,7 +12,8 @@ namespace ShopNC.Web.Areas.Admin.Controllers
     public class LoginController : Controller
     {
         IUserInfoService bll;
-
+        
+        
         public LoginController(IUserInfoService bll) 
         {
             this.bll = bll;

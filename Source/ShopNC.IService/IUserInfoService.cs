@@ -1,4 +1,5 @@
 ﻿using ShopNC.Entity.Mapping;
+using ShopNC.IService.Cond;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace ShopNC.IService
 {
     public partial interface IUserInfoService:IBaseService<UserInfo>
     {
+        Task<IQueryable<UserInfo>> GetPageUserInfo(UserInfoCond cond);
     }
 }

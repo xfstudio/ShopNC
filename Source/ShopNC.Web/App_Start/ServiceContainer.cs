@@ -24,19 +24,21 @@ namespace ShopNC.Web
                 {
                     containerBuilder = new ContainerBuilder();
 
-                    containerBuilder.RegisterType<UserInfoService>().As<IUserInfoService>().SingleInstance();
-                    containerBuilder.RegisterType<UserRoleService>().As<IUserRoleService>().SingleInstance();
-
-                   // Scan an assembly for components 查找程序集中以services结尾的类型 不要使用这种方式注册 不保险
-                    /* containerBuilder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
-                        .Where(t => t.Name.EndsWith("Service"))
-                        .AsImplementedInterfaces().SingleInstance();*/
+                    //containerBuilder.RegisterType<UserInfoService>().As<IUserInfoService>().SingleInstance();
+                    //containerBuilder.RegisterType<UserRoleService>().As<IUserRoleService>().SingleInstance();
+                    //containerBuilder.RegisterType<PermissionService>().As<IPermissionService>();
+                    //containerBuilder.RegisterType<PermissionGroupService>().As<IPermissionGroupService>();
+                  
+                   // Scan an assembly for components 查找程序集中以services结尾的类型 
+                     containerBuilder.RegisterAssemblyTypes(typeof(UserInfoService).Assembly)
+                         .Where(t =>t.BaseType!=null&&t.BaseType.Name.StartsWith("BaseService"))
+                         .AsImplementedInterfaces().InstancePerLifetimeScope();
 
                 }
             }
 
             //  containerBuilder.Build();
-            //containerBuilder.RegisterControllers(Assembly.GetExecutingAssembly());  //注入所有Controller
+            containerBuilder.RegisterControllers(Assembly.GetExecutingAssembly());  //注入所有Controller
             var container = containerBuilder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container)); //解决Controller 没有为该对象定义无参数的构造函数
         }

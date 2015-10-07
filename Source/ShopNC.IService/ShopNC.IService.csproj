@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cond\PageListBaseCond.cs" />
+    <Compile Include="Cond\UserInfoCond.cs" />
     <Compile Include="IBaseService.cs" />
     <Compile Include="IUserInfoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

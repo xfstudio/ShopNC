@@ -7,8 +7,6 @@
     <title>Index</title>
     <link href="~/Scripts/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet" />
     <link href="~/Scripts/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" />
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/Admin/WHS/style.css" rel="stylesheet" />
     <link href="~/Content/Admin/WHS/default.css" rel="stylesheet" />
     <link href="~/Content/Admin/CSS/Index.css" rel="stylesheet" />
@@ -39,28 +37,31 @@
             height: 16px;
             line-height: 16px;
         }
+
         span.nav {
             display: inline-block;
         }
-        #nav ul li:hover {
-            border: 1px dashed #b7daf5;
-            background: #e1eff9;
+
+        #nav ul li {
+            border: 1px dashed #fff;
         }
 
-        #nav ul li a {
-            display: inline-block;
-            width: 100%;
-        }
+            #nav ul li:hover {
+                border: 1px dashed #b7daf5;
+                background: #e1eff9;
+            }
 
-        /*一级导航*/
-
+            #nav ul li a {
+                display: inline-block;
+                width: 100%;
+            }
     </style>
 </head>
 
 <body class="easyui-layout">
     <!--------------头部---------------------------->
     <div class="header" id="header" data-options="region:'north'">
-        <div class="navmenu">
+        <div class="navmenu" style="display:none;">
             <ul class="menu">
                 <li class="current" id="menu0"><a href="/"><span><img src="/Content/icon/product.png" height="15px" />商 品</span></a> </li>
 
@@ -108,74 +109,68 @@
 
     <!--左侧导航菜单-->
     <div region="west" split="true" title="导航菜单" style="width:200px;padding:1px;overflow:hidden;">
-        <div  id="nav" class="easyui-accordion" fit="true" border="false">
-            <div  title="主功能菜单" iconcls="icon-computer" style="padding:10px;overflow:auto;" selected="true">
+        <div id="nav" class="easyui-accordion" fit="true" border="false">
+            <div title="用户管理" iconcls="icon-computer" style="padding:10px;overflow:auto;" selected="true">
                 <ul>
-                    <li><div><a href="javascript:;"><span class="icon icon-lock">&nbsp;</span><span class="nav">脚本功能</span></a></div></li>
-                    <li><div><a href="javascript:;"><span class="icon icon-lock">&nbsp;</span><span class="nav">打开页面功能</span></a></div></li>
+                    <li class="menuItem" icon="icon-user" href="@Url.Action("Index", "UserInfo", new { Area="Admin"})"><div><a href="javascript:;"><span class="icon icon-user">&nbsp;</span><span class="nav">管理员管理</span></a></div></li>
+                    <li class="menuItem" icon="icon-lock"><div><a href="javascript:;"><span class="icon icon-lock">&nbsp;</span><span class="nav">角色管理</span></a></div></li>
+                    <li class="menuItem" icon="icon-lock"><div><a href="javascript:;"><span class="icon icon-lock">&nbsp;</span><span class="nav">权限组管理</span></a></div></li>
+                    <li class="menuItem" icon="icon-lock"><div><a href="javascript:;"><span class="icon icon-lock">&nbsp;</span><span class="nav">权限管理</span></a></div></li>
+                </ul>
+            </div>
+            <div title="基本配置" iconcls="icon-computer" style="padding:10px;overflow:hidden;height:1000px;" selected="true">
+                <ul>
+                    <li class="menuItem" icon="icon-lock"><div><a href="javascript:;"><span class="icon icon-lock">&nbsp;</span><span class="nav">地区</span></a></div></li>
                 </ul>
             </div>
         </div>
     </div>
 
+    <!--Tab上菜单操作-->
+    <div id="mm" class="easyui-menu" style="width:150px;">
+        <div id="mm-tabupdate">刷新</div>
+        <div class="menu-sep"></div>
+        <div id="mm-tabclose">关闭</div>
+        <div id="mm-tabcloseall">全部关闭</div>
+        <div id="mm-tabcloseother">除此之外全部关闭</div>
+        <div class="menu-sep"></div>
+        <div id="mm-tabcloseright">当前页右侧全部关闭</div>
+        <div id="mm-tabcloseleft">当前页左侧全部关闭</div>
+        <div class="menu-sep"></div>
+        <div id="mm-exit">退出</div>
+    </div>
+
     <!--主工作区-->
     <div id="mainPanle" region="center" title="" style="overflow:hidden;">
-        <div id="tt" class="easyui-tabs" fit="true">
-            <div title="用户管理" data-options="iconCls:'icon-reload'" closable="true" style="padding: 20px;">
-                <iframe src="" frameborder="0" scrolling="no" style="width:100%; height:95%;"></iframe>
+        <div id="tabs" class="easyui-tabs" fit="true">
+            <div title="首页" data-options="icon:'icon-house'" closable="false">
+                <iframe src="" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
     </div>
 
+
     <div class="footer" data-options="region:'south',split:true" style="height:30px;">
         版权所有：-----ShopNC
     </div>
+    <div id='Loading' style="position: absolute; z-index: 1000; top: 0px; left: 0px; width: 100%; height: 100%; background: #fff url('/Content/Image/loading.jpg') no-repeat center ; text-align: center; padding-top: 20%;"><h1><image src='/Content/Image/loading.jpg' /><font color="#15428B"></font></h1></div>
+    @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("/Scripts/jquery-easyui-1.4.3/jquery.easyui.min.js")
     <script src="~/Scripts/datapattern.js"></script>
+    <script src="~/Scripts/Admin/Index.js"></script>
     <script type="text/javascript">
-        $(function () {
-            initLeftMenuEvent();
-            showTime();
-        })
-
-        function initLeftMenuEvent() {
-            $(".menuItem").click(function () {
-
-                var title = $(this).text();
-                var url = $(this).attr("href");
-
-                //判断是否存在选项卡
-                if ($('#tt').tabs('exists', title)) {
-                    $('#tt').tabs('select', title)
-                }
-
-                else {
-                    $('#tt').tabs('add', {
-                        title: title,
-                        content: '<iframe src="' + url + '" scrolling="no" frameborder="0" height="99%" width="100%"></iframe>',
-                        closable: true,
-                        tools: [{
-                            iconCls: 'icon-mini-refresh',
-                            handler: function () {
-                                // alert('refresh');
-                            }
-                        }]
-                    });
-                }
-
-                //让菜单导向不会导向到单独的页面如<a href="UserInfo/Index" class="menuItem">用户管理</a>
-                return false;
+        function closes() {
+            $("#Loading").fadeOut("normal", function () {
+                $(this).remove();
             });
         }
-
-        function showTime() {
-            setInterval(function () {
-                var timeNow = (new Date()).pattern("yyyy-MM-dd HH:mm:ss EEE");
-                $("#date").html(timeNow);
-            }, 1000);
+        var pc;
+        $.parser.onComplete = function () {
+            if (pc) clearTimeout(pc);
+            pc = setTimeout(closes, 1000);
         }
+
     </script>
 </body>
 </html>

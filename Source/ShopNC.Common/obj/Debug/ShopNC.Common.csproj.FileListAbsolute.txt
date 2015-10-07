@@ -8,3 +8,4 @@ D:\Git\ShopNC\Source\ShopNC.Common\obj\Debug\ShopNC.Common.dll
 D:\Git\ShopNC\Source\ShopNC.Common\obj\Debug\ShopNC.Common.pdb
 D:\Git\ShopNC\Source\ShopNC.Common\bin\Debug\AutoMapper.dll
 D:\Git\ShopNC\Source\ShopNC.Common\bin\Debug\AutoMapper.xml
+D:\Git\ShopNC\Source\ShopNC.Common\obj\Debug\ShopNC.Common.csprojResolveAssemblyReference.cache

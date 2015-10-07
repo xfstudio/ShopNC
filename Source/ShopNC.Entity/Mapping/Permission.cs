@@ -15,7 +15,7 @@ namespace ShopNC.Entity.Mapping
         public string Name { get; set; }
 
         [Required, MaxLength(216)]
-        public string Url { get; set; }
+        public string Path { get; set; }
         public bool? IsMenu { get; set; }
 
         [MaxLength(32)]

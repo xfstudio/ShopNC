@@ -19,7 +19,7 @@ namespace ShopNC.Entity.Mapping
         /// </summary>
         protected EntityBase()
         {
-           // IsDeleted = false;
+            IsDeleted = false;
         }
 
         #region 属性
