@@ -285,6 +285,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-easyui-1.4.3\changelog.txt" />
     <Content Include="Scripts\jquery-easyui-1.4.3\easyloader.js" />
+    <Content Include="Scripts\FormExt.js" />
     <Content Include="Scripts\jquery-easyui-1.4.3\jquery.easyui.min.js" />
     <Content Include="Scripts\jquery-easyui-1.4.3\jquery.easyui.mobile.js" />
     <Content Include="Scripts\jquery-easyui-1.4.3\jquery.min.js" />
@@ -688,6 +689,8 @@
     <Content Include="Scripts\jquery-easyui-1.4.3\themes\metro\window.css" />
     <Content Include="Scripts\jquery-easyui-1.4.3\themes\mobile.css" />
     <Content Include="Scripts\jquery-easyui-1.4.3\ValidateExt.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

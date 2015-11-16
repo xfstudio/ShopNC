@@ -14,7 +14,7 @@ namespace ShopNC.Service
         public async Task<IQueryable<UserInfo>> GetPageUserInfo(IService.Cond.UserInfoCond cond)
         {
            int total = cond.TotalRecord;
-           var data= await base.LoadPageEntityAsync(p => true, cond.Page, cond.Rows,out total, p => p.CreateTime, false);
+           var data= await LoadPageEntityAsync(p => true, cond.Page, cond.Rows,out total, p => p.CreateTime, false);
            cond.TotalRecord = total;
            return data;
         }
