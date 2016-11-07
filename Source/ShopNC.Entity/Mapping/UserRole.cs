@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace ShopNC.Entity.Mapping
 {
-    public class UserRole:EntityBase<int>
+    public class UserRole
     {
-        //[Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //public int ID { get; set; }
+        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
 
         [MaxLength(16),Required]
         public string ENName { get; set; }
@@ -34,8 +34,6 @@ namespace ShopNC.Entity.Mapping
         //[InverseProperty("UserRole")]//属性反转
         //public List<UserRoleR> UserRoleR { get; set; }
 
-        public virtual IList<UserInfo> UserInfos { get; set; }
-
-        public virtual IList<PermissionGroup> PermissionGroups { get; set; }
+        public virtual List<UserInfo> UserInfos { get; set; }
     }
 }

@@ -13,11 +13,10 @@ namespace ShopNC.Repository
     public class EFContextFactory : IDBContextFactory
     {
         private readonly object o = new object();
-        static DbContext dbContext = null;
-        public  DbContext GetCurrentContextInstence()
+        public DbContext GetCurrentContextInstence()
         {
 
-            dbContext = (DbContext)CallContext.GetData(typeof(EFContextFactory).FullName);
+            DbContext dbContext = (DbContext)CallContext.GetData(typeof(EFContextFactory).FullName);
 
             //首次加载线程槽无数据
             if (dbContext == null)
@@ -34,17 +33,7 @@ namespace ShopNC.Repository
                 }
             }
 
-           // dbContext = new ShopNCContext();
             return dbContext;
         }
-
-        public  void DisposeContext()
-        {
-            if (dbContext!=null)
-            {
-                dbContext.Dispose();
-            }
-        }
     }
-    
 }

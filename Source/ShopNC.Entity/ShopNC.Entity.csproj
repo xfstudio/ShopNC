@@ -48,9 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mapping\EntityBase.cs" />
-    <Compile Include="Mapping\Permission.cs" />
-    <Compile Include="Mapping\PermissionGroup.cs" />
     <Compile Include="Mapping\ShopNCContext.cs" />
     <Compile Include="Mapping\UserInfo.cs" />
     <Compile Include="Mapping\UserRole.cs" />

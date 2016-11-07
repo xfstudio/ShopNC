@@ -12,8 +12,7 @@ namespace ShopNC.Repository.Tests
     [TestClass()]
     public class BaseRepositoryTests
     {
-         static IDBSession session = new DBSessionFactory().GetDBSession();
-         IUserInfoRepository userDal = session.UserInfoRepository;
+        IUserInfoRepository userDal = new UserInfoRepository();
 
         [TestMethod()]
         public void AddEntityTest()
@@ -29,13 +28,8 @@ namespace ShopNC.Repository.Tests
                 Password = "111111",
                 Roles = new List<UserRole>() { role }
             };
-            userDal.AddEntity(user);
-            var result= session.SaveChanges();
 
-
-            Assert.IsTrue(user.ID > 0);
-            Assert.IsTrue(result > 0);
-
+            Assert.IsTrue(userDal.AddEntity(user).ID > 0);
         }
 
         [TestMethod()]
@@ -46,7 +40,7 @@ namespace ShopNC.Repository.Tests
             user.UserName = "updatename";
 
             Assert.IsTrue(userDal.UpdateEntity(user));
-            Assert.IsTrue(session.SaveChanges()>0);
+
         }
 
         [TestMethod()]
@@ -64,18 +58,13 @@ namespace ShopNC.Repository.Tests
                 Roles = new List<UserRole>() { role }
             };
             userDal.AddEntity(user);
-            session.SaveChanges();
-
             Assert.IsTrue(userDal.DeleteEntity(user));
-            Assert.IsTrue(session.SaveChanges() > 0);
-
-            session.DisposeDBContext();
         }
 
         [TestMethod()]
         public void LoadEntityTest()
         {
-          Assert.IsTrue(userDal.LoadEntity(p => true).Count() > 1);
+            Assert.Fail();
         }
 
         [TestMethod()]

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace ShopNC.Entity.Mapping
 {
-    public class UserInfo : EntityBase<int>
+    public class UserInfo
     {
-        //[Key]
-        //public int ID { get; set; }
+        [Key]
+        public int ID { get; set; }
 
         [MaxLength(16), Required]
         public string UserName { get; set; }
@@ -43,9 +43,6 @@ namespace ShopNC.Entity.Mapping
         public string Editor { get; set; }
 
        //public List<UserRoleR> UserRoleR { get; set; }
-         public virtual List<UserRole> Roles { get; set; }
-
-        //特殊权限
-         public virtual List<Permission> Permissions { get; set; }
+       public List<UserRole> Roles { get; set; }
     }
 }

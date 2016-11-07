@@ -9,8 +9,6 @@ namespace ShopNC.IRepository
 {
     public interface IDBContextFactory
     {
-        DbContext GetCurrentContextInstence();
-
-        void DisposeContext();
+        DbContext GetCurrentContextInstence(); 
     }
 }

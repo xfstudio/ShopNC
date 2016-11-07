@@ -17,18 +17,10 @@ namespace ShopNC.Entity.Mapping
         {
             //自动更新数据库 不用运行 update-database 命令。
             Database.SetInitializer<ShopNCContext>(new MigrateDatabaseToLatestVersion<ShopNCContext, Configuration>(CONNSTR));
-
-           // this.Configuration.ProxyCreationEnabled = true;
-           // this.Configuration.LazyLoadingEnabled = true; 默认为true
         }
         public DbSet<UserInfo> UserInfo { get; set; }
 
         public DbSet<UserRole> UserRole { get; set; }
-
-        public DbSet<Permission> Permission { get; set; }
-
-        public DbSet<PermissionGroup> PermissionGroup { get; set; }
-
 
        // public DbSet<UserRoleR> UserRoleR { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

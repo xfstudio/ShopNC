@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -53,19 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
-    <Compile Include="DBSession.cs" />
-    <Compile Include="DBSessionFactory.cs" />
     <Compile Include="EFContextFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="T4\DBSession.cs">
-      <DependentUpon>DBSession.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="T4\PermissionGroupRepository.cs" />
-    <Compile Include="T4\PermissionRepository.cs" />
-    <Compile Include="T4\UserInfoRepository.cs" />
-    <Compile Include="T4\UserRoleRepository.cs" />
     <Compile Include="UserInfoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,40 +66,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="T4\DBSession.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DBSession.cs</LastGenOutput>
-    </None>
-    <None Include="T4\RepositoryMulti.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastOutputs>
-.\PermissionGroupRepository.cs
-.\PermissionRepository.cs
-.\RepositoryMulti.txt
-.\UserInfoRepository.cs
-.\UserRoleRepository.cs
-</LastOutputs>
-      <LastGenOutput>RepositoryMulti.txt</LastGenOutput>
-    </None>
-    <None Include="T4\RepositoryTemplate.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RepositoryTemplate.txt</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="T4\RepositoryMulti.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RepositoryMulti.tt</DependentUpon>
-    </Content>
-    <Content Include="T4\RepositoryTemplate.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

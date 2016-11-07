@@ -10,16 +10,15 @@ using System.Threading.Tasks;
 namespace ShopNC.Repository
 {
     //数据访问层基类
-    public class BaseRepository<T>:IBaseRepository<T>
-        where T : class,new()
+    public class BaseRepository<T> where T : class,new()
     {
         //解耦了 当前UserInfoRepository跟上下文的直接依赖。
         //保证了线程内上下文的实例唯一
 
-        private  IDBContextFactory dbContextFactory = new EFContextFactory();
+        private static IDBContextFactory dbContextFactory = new EFContextFactory();
 
-        protected DbContext db;
-        public BaseRepository()
+        static DbContext db;
+        static BaseRepository()
         {
             db = dbContextFactory.GetCurrentContextInstence();
 
@@ -28,14 +27,14 @@ namespace ShopNC.Repository
         /// <summary>
         /// 添加实体
         /// </summary>
-        /// <param name="entity"></param>
+        /// <param name="user"></param>
         /// <returns></returns>
         public T AddEntity(T entity)
         {
             if (entity != null)
             {
                 db.Set<T>().Add(entity);
-               // db.SaveChanges();
+                db.SaveChanges();
 
             }
             return entity;
@@ -44,21 +43,21 @@ namespace ShopNC.Repository
         /// <summary>
         /// 更新实体
         /// </summary>
-        /// <param name="entity"></param>
+        /// <param name="user"></param>
         /// <returns></returns>
         public bool UpdateEntity(T entity)
         {
             db.Set<T>().Attach(entity);
             db.Entry<T>(entity).State = EntityState.Modified;
 
-           // db.SaveChanges();
+            db.SaveChanges();
             return true;
         }
 
         /// <summary>
         /// 删除实体 删除的时候只需要给主键赋值就可以
         /// </summary>
-        /// <param name="entity"></param>
+        /// <param name="userId"></param>
         /// <returns></returns>
         public bool DeleteEntity(T entity)
         {
@@ -66,7 +65,7 @@ namespace ShopNC.Repository
             db.Set<T>().Attach(entity);
             db.Entry<T>(entity).State = EntityState.Deleted;
 
-           // db.SaveChanges();
+            db.SaveChanges();
             return  true;
 
         }
@@ -84,13 +83,13 @@ namespace ShopNC.Repository
         /// <summary>
         /// 根据条件获取实体列表(分页)
         /// </summary>
-        /// <typeparam name="S">排序类型</typeparam>
-        /// <param name="whereLambda">查询条件</param>
-        /// <param name="pageIndex">页索引</param>
-        /// <param name="pageSize">页大小</param>
-        /// <param name="total">总记录数</param>
-        /// <param name="orderLambda">排序Lambda</param>
-        /// <param name="ifAsc">是否自增</param>
+        /// <typeparam name="S"></typeparam>
+        /// <param name="whereLambda"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="total"></param>
+        /// <param name="orderLambda"></param>
+        /// <param name="ifAsc"></param>
         /// <returns></returns>
         public IQueryable<T> LoadPageEntity<S>(Expression<Func<T, bool>> whereLambda, int? pageIndex, int? pageSize, out int total, Expression<Func<T, S>> orderLambda, bool isAsc)
         {
