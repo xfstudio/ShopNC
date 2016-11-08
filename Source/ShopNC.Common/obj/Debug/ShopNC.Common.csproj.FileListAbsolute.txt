@@ -2,3 +2,8 @@ D:\project\ShopNC\ShopNC.Common\bin\Debug\ShopNC.Common.dll
 D:\project\ShopNC\ShopNC.Common\bin\Debug\ShopNC.Common.pdb
 D:\project\ShopNC\ShopNC.Common\obj\Debug\ShopNC.Common.dll
 D:\project\ShopNC\ShopNC.Common\obj\Debug\ShopNC.Common.pdb
+D:\bak\ShopNC\ShopNC.Common\bin\Debug\ShopNC.Common.dll
+D:\bak\ShopNC\ShopNC.Common\bin\Debug\ShopNC.Common.pdb
+D:\bak\ShopNC\ShopNC.Common\obj\Debug\ShopNC.Common.csprojResolveAssemblyReference.cache
+D:\bak\ShopNC\ShopNC.Common\obj\Debug\ShopNC.Common.dll
+D:\bak\ShopNC\ShopNC.Common\obj\Debug\ShopNC.Common.pdb
